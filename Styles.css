@@ -1,0 +1,158 @@
+
+* {   /*Aqui o * faz referência a todos os elementos/tags*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;      /*E não content-box que é o padrão, pois se 
+                                 coloco padding em algum elemento (como o container), 
+                                 ele faz com que a caixa
+                                 ultrapasse o width pré-estabelecido que declarei, 
+                                 de modo que se eu usar o
+                                 border-box, os elementos se ajustarão para 
+                                 respeitar o width que eu declarei antes. */ 
+}
+
+html {
+    /*VARIÁVEIS*/
+    --bg-color: #FFFFFF;
+    --text-color: #252222;
+    --button-color: #708090;
+    --button-text-color: #FFFFFF;
+    --button-hover-color: #203a2b;
+}
+
+body.grad {
+    --bg-color: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    --text-color: #FFFFFF;
+    background-attachment:fixed;
+}
+
+/* Altero a Classe caso queira mudar o theme */
+body.dark {                             
+    --bg-color: #252222;
+    --text-color: #FFFFFF;
+    --button-color: #708090;
+    --button-text-color: #FFFFFF;
+    --button-hover-color: #82afc9;
+}
+
+body.pink {
+    --bg-color: #FFC0CB;
+    --text-color: #9C2150;
+    --button-color: #F08080;
+    --button-text-color: #FFFFFF;
+    --button-hover-color: #CD5C5C;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+.container {
+    width: 300px;
+    height: 500px; 
+    text-align: center;
+    margin: 60px auto;           /*Aqui quando dou 2 valores, o 1º referencia 
+                                 top and bottom e o segundo os lados
+                                 Se eu colocasse um 3ª valor teria relação com Bottom
+                                 Esses valores agrupados chamamos de Short-hand, 
+                                 ao invés de margin-left etc*/
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+}
+ 
+a {
+    text-decoration: none; /*Para tirar o sublinhado de todos*/
+}
+
+img {
+    width: 40%;
+     
+    transition: width 900ms;
+}
+
+img:hover {
+    width: 50%;
+}
+
+img.perfil {
+    border-radius: 50%;
+    border: 3px var(--button-color) solid;
+    padding: 1px;
+    /* width: 110px; */   /* aqui caso eu queira deixar a imagem com tamanho fixo */
+    /* height: 110px; */  
+    margin-top: 40px;
+    box-sizing: content-box;
+
+    transition: padding 100ms;
+    transition: border 100ms;
+}
+
+.perfil:hover {
+    padding: 3px;
+    border: 5px var(--button-hover-color) solid;
+}
+
+h1 {
+    display: block;
+    margin-top: 30px;
+    font-size: 35px;
+}
+
+p {
+    margin-top: 15px;
+    margin-bottom: 60px;
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    opacity: 0.5;
+}
+
+ul {
+    list-style: none;           /*Só pra deixar sem formatação o estilo de lista*/
+}
+
+ul li a {
+    border-radius: 6px;
+    padding: 0;
+    margin: 15px 0px;            
+    height: 60px;
+    display: flex;               /*flex, ou block funcionariam aqui - jogariam 
+                                elementos pra baixo ou cima. Já o inline não 
+                                possibilita propriedades como margin ou height e width*/
+    align-items: center;
+    justify-content: center; 
+    background: var(--button-color);
+    color: var(--button-text-color);
+    font-size: 14px;
+    /*text-transform: uppercase; - Caso quisesse td maiuscula*/
+    transition: background 600ms;  /* Aqui já que há o :hover, aviso 
+                                   que toda vez que background for alterado, terá esse delay*/
+}
+
+/* pseudo-class */
+ul li a:hover {
+    background: var(--button-hover-color);
+    transform: scale(1.01)
+}
+
+ul li i {
+    margin: 0px 5px;
+}
+
+footer {
+    margin-top: 80px;
+    font-size: 13px;
+    opacity: 0.4;
+    /* cursor: pointer; */
+
+    transition: opacity 900ms;
+}
+
+footer:hover {
+    opacity: 1;
+}
+
+footer a {
+    color:var(--text-color)
+}
