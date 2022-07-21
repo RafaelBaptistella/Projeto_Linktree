@@ -6,7 +6,7 @@ through the following classes declared to the HTML body: 'Dark, Pink or Grad'. T
 
 
 Projeto de Centralizador de Links feito com as linguagens HTML e CSS:
-Ajuda no posicionamento profissional de marcas e de pessoas gerando tráfico para canais
+Ajuda no posicionamento profissional de marcas e de pessoas gerando tráfego para canais
 de conteúdo ou portfolios pela consolidação de links/endereços. É possível personalizar o estilo
 do CSS com a declaração das classes 'Dark, Pink ou Grad' no body do HTML e consequente alteração dinâmica
 e automática do CSS.
